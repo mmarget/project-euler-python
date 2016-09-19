@@ -18,8 +18,8 @@ def intToText(i):
     return ret
 
     
-print(567 % 1000,int((567 - (567 % 100))/100))
-print()
+#print(567 % 1000,int((567 - (567 % 100))/100))
+#print()
 sum = 0
 for i in range(1, 1001):
     text = intToText(i)
