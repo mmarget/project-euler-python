@@ -1,4 +1,5 @@
 def isPrime ( i ):
+    if i == 2: return True
     c = 2
     ret = True
     while c < (pow(i,0.5)+1):
@@ -8,15 +9,13 @@ def isPrime ( i ):
         c = c + 1
     return ret
 
-def rotate(i):
-    numchar = str(i)
-    first = numchar[0]
-    ret = ''
-    for j in range(len(numchar)-1):
-        ret += numchar[j+1]
-    ret += first
-    i = int(ret)
-    return i
+def rotate(arr):
+    ret = []
+    first = arr[0]
+    for i in range(len(arr) - 1):
+        ret.append(arr[i+1])
+    ret.append(first)
+    return ret
 
 def lexicographicPermutation(arr):
     # Find non-increasing suffix
@@ -41,4 +40,11 @@ def arrToInt(arr):
     for i in range(len(arr)):
         ret = ret + str(arr[i])
     return int(ret)
+
+def intToArr(i):
+    istr = str(i)
+    ret = []
+    for j in range(len(istr)):
+        ret.append(int(istr[j]))
+    return ret
         
