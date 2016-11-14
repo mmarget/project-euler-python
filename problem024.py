@@ -1,15 +1,14 @@
+#!/usr/bin/env python3
+
 #Project Euler Problem #24: Lexicographic permutations
 #What is the 1000000th lexiographic permutation of 0123456789
 
-def lexi(nmin, nmax, perm):
-    number = []
-    i = nmin
-    while i <= nmax:
-        number.append(i)
-        i += 1
-    for j in range(perm):
-        for k in 
-    return number
+import helpers
 
-print(lexi(0, 9, 0))
+arr = []
+for i in range(10):
+    arr.append(i)
 
+for _ in range(999999):
+    helpers.lexicographicPermutation(arr)
+print(helpers.arrToInt(arr))
