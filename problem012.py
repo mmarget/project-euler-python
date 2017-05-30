@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #Project Euler Problem #012:Highly divisible tirangular number
 #What is the value of the first triangle number to have over 500 divisors?
 
@@ -21,7 +22,7 @@ def dividers (m):
 
 ##################
 
-def pro_solution(n):
+def dividerss(n):
     count = 0
     dividers = 1 
     while n % 2 == 0:
@@ -37,7 +38,7 @@ def pro_solution(n):
         dividers = dividers * (count + 1)
         p += 2
     return dividers
-
+'''
 def splitfind(limit):
     n = 1
     lnum, rnum = 1, 1
@@ -49,13 +50,16 @@ def splitfind(limit):
     return n
 #print(dividers(triangle(7)))
 splitfind(1000)
-#while True:
-#    i += 1
-#    tri = triangle(i)
-#    div = dividers(tri)
-#    if div > test:
-#        test= div
-#        print("triangle",i,"=",triangle(i),", has",dividers(triangle(i)),"dividers")
-#    if div > 500:
-#        print("triangle",i,"=",triangle(i),", has",dividers(triangle(i)),"dividers")
-#        break
+'''
+i = 0
+test = 0
+while True:
+    i += 1
+    tri = triangle(i)
+    div = dividerss(tri)
+    if div > test:
+        test= div
+        print("triangle",i,"=",tri,", has",div,"dividers")
+    if div > 500:
+        print("triangle",i,"=",tri,", has",div,"dividers")
+        break
