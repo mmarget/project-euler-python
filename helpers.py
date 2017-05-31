@@ -1,4 +1,5 @@
 def isPrime ( i ):
+    if i == 1: return False
     if i == 2: return True
     c = 2
     ret = True
