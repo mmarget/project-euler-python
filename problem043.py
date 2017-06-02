@@ -7,3 +7,6 @@ for i in range(1234567890, 9876543211):
         print(i)
 
 print("bla")
+for n in bla:
+    if int(str(n)[1:4]) % 2 == 0 and int(str(n)[2:5]) % 3 == 0 and int(str(n)[3:6]) % 5 == 0 and int(str(n)[4:7]) % 7 == 0 and int(str(n)[5:8]) % 11 == 0 and int(str(n)[6:9]) % 13 == 0 and int(str(n)[7:10]) % 17 == 0:
+        print(n)
