@@ -18,24 +18,7 @@ def find_abundand_nums(limit):
         if sum(find_divisors(i)) > i: arr.append(i)
     return arr
 
-#print([i for i in find_abundand_nums(20000) if i%2 != 0])
-
-#print(find_divisors(4))
-
 
 anums = find_abundand_nums(28123)
-arr = []
-for number in range(1, 28124):
-    value = True
-    bla = [i for i in anums if i <= number]
-    for i in bla:
-        if value == False: break
-        for j in bla:
-            if i != j and i + j == number: 
-                value = False
-                break
-    if value == True: 
-        arr.append(number)
-        print(number)
-
-print( sum(arr))
+bla = list(set([i+j for i in anums for j in anums if i+j <= 28123]))
+print(sum([i for i in range(1, 28124) if i not in bla]))
